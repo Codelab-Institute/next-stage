@@ -4,6 +4,12 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    groups:
+      all-deps:
+        patterns: ["*"]
+      security:
+        applies-to: security-updates
+        patterns: ["*"]
     ignore:
       # typescript stays on 6.x for markuplint's JSX parser; TS 7 is installed as typescript-7
       - dependency-name: "typescript"
